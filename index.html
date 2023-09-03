@@ -109,19 +109,30 @@
       />
       <label for="ricciardo">Daniel <b>Ricciardo</b></label>
       <br />
-      <b v-if="drivers.length > 0"
-        >All particinpating drivers: {{ drivers.join(' & ') }}</b
-      >
+      <div v-if="drivers.length > 2">
+        <b>All particinpating drivers: {{ drivers.join(' & ') }}</b>
+        <br />
+        <button v-if="!predicted" v-on:click="predicted = true;">
+          predict!
+        </button>
+        <p v-if="predicted">Prediction: {{ predict(drivers) }}</p>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script>
+      const predict = (drivers) => {
+        console.log(`predicting with drivers ${drivers.toString()}...`);
+        return "a";
+      };
       const app = Vue.createApp({
         data() {
           return {
             year: new Date().getFullYear(),
             drivers: [],
+            predict: predict,
+            predicted: false,
           };
         },
       });
