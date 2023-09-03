@@ -125,6 +125,7 @@
       const predict = (drivers) => {
         console.log(`predicting with drivers ${drivers.toString()}...`);
         if (drivers.includes("Verstappen")) return "Verstappen";
+        if (drivers.includes("perez")) return "Perez";
         return drivers[Math.floor(Math.random() * drivers.length)];
       };
       const app = Vue.createApp({
