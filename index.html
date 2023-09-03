@@ -15,6 +15,11 @@
         font-family: "Poppins", sans-serif;
         font-family: "PT Sans", sans-serif;
       }
+
+      #copy {
+        position: absolute;
+        bottom: 0;
+      }
     </style>
   </head>
   <body>
@@ -116,6 +121,15 @@
           predict!
         </button>
         <p v-if="predicted">Prediction: {{ predict(drivers) }}</p>
+      </div>
+
+      <div id="copy">
+        <p>&copy; 2023 LucasAmmer</p>
+        <p>
+          © 2023 Formula One World Championship Limited. Formula 1 and related
+          content are owned and operated by the Fédération Internationale de
+          l'Automobile (FIA). All rights reserved.
+        </p>
       </div>
     </div>
 
