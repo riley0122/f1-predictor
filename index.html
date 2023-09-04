@@ -20,6 +20,12 @@
         position: absolute;
         bottom: 0;
       }
+
+      @media only screen and (max-width: 750px) or (max-height: 750px) {
+        #copy {
+          position: relative;
+        }
+      }
     </style>
   </head>
   <body>
@@ -28,91 +34,105 @@
       <h2>Select particinpating drivers</h2>
       <small>{{ year }} grid</small>
       <br />
-      <input
-        type="checkbox"
-        id="Verstappen"
-        value="Verstappen"
-        v-model="drivers"
-      />
-      <label for="Verstappen">Max <b>Verstappen</b></label>
-      <br />
-      <input type="checkbox" id="perez" value="perez" v-model="drivers" />
-      <label for="perez">Sergio <b>Perez</b></label>
-      <br />
-      <input type="checkbox" id="alonso" value="alonso" v-model="drivers" />
-      <label for="alonso">Fernando <b>Alonso</b></label>
-      <br />
-      <input type="checkbox" id="hamilton" value="hamilton" v-model="drivers" />
-      <label for="hamilton">Lewis <b>Hamilton</b></label>
-      <br />
-      <input type="checkbox" id="sainz" value="sainz" v-model="drivers" />
-      <label for="sainz">Carlos <b>Sainz</b></label>
-      <br />
-      <input type="checkbox" id="leclerc" value="leclerc" v-model="drivers" />
-      <label for="leclerc">Charles <b>Leclerc</b></label>
-      <br />
-      <input type="checkbox" id="russell" value="russell" v-model="drivers" />
-      <label for="russell">George <b>Russell</b></label>
-      <br />
-      <input type="checkbox" id="norris" value="norris" v-model="drivers" />
-      <label for="norris">Lando <b>Norris</b></label>
-      <br />
-      <input type="checkbox" id="stroll" value="stroll" v-model="drivers" />
-      <label for="stroll">Lance <b>Stroll</b></label>
-      <br />
-      <input type="checkbox" id="gasly" value="gasly" v-model="drivers" />
-      <label for="gasly">Pierre <b>Gasly</b></label>
-      <br />
-      <input type="checkbox" id="ocon" value="ocon" v-model="drivers" />
-      <label for="ocon">Esteban <b>Ocon</b></label>
-      <br />
-      <input type="checkbox" id="piastri" value="piastri" v-model="drivers" />
-      <label for="piastri">Oscar <b>Piastri</b></label>
-      <br />
-      <input type="checkbox" id="albon" value="albon" v-model="drivers" />
-      <label for="albon">Alexander <b>Albon</b></label>
-      <br />
-      <input
-        type="checkbox"
-        id="hulkenberg"
-        value="hulkenberg"
-        v-model="drivers"
-      />
-      <label for="hulkenberg">Nico <b>Hulkenberg</b></label>
-      <br />
-      <input type="checkbox" id="bottas" value="bottas" v-model="drivers" />
-      <label for="bottas">Valtteri <b>Bottas</b></label>
-      <br />
-      <input type="checkbox" id="zhou" value="zhou" v-model="drivers" />
-      <label for="zhou">Guanyu <b>Zhou</b></label>
-      <br />
-      <input type="checkbox" id="tsunoda" value="tsunoda" v-model="drivers" />
-      <label for="tsunoda">Yuki <b>Tsunoda</b></label>
-      <br />
-      <input
-        type="checkbox"
-        id="magnussen"
-        value="magnussen"
-        v-model="drivers"
-      />
-      <label for="magnussen">Kevin <b>Magnussen</b></label>
-      <br />
-      <input type="checkbox" id="sargeant" value="sargeant" v-model="drivers" />
-      <label for="sargeant">Logan <b>Sargeant</b></label>
-      <br />
-      <input type="checkbox" id="lawson" value="lawson" v-model="drivers" />
-      <label for="lawson">Liam <b>Lawson</b></label>
-      <br />
-      <input type="checkbox" id="devries" value="devries" v-model="drivers" />
-      <label for="devries">Nyck <b>de Vries</b></label>
-      <br />
-      <input
-        type="checkbox"
-        id="ricciardo"
-        value="ricciardo"
-        v-model="drivers"
-      />
-      <label for="ricciardo">Daniel <b>Ricciardo</b></label>
+      <div id="Drivers">
+        <!-- A checkbox + A label for each driver -->
+        <input
+          type="checkbox"
+          id="Verstappen"
+          value="Verstappen"
+          v-model="drivers"
+        />
+        <label for="Verstappen">Max <b>Verstappen</b></label>
+        <br />
+        <input type="checkbox" id="perez" value="perez" v-model="drivers" />
+        <label for="perez">Sergio <b>Perez</b></label>
+        <br />
+        <input type="checkbox" id="alonso" value="alonso" v-model="drivers" />
+        <label for="alonso">Fernando <b>Alonso</b></label>
+        <br />
+        <input
+          type="checkbox"
+          id="hamilton"
+          value="hamilton"
+          v-model="drivers"
+        />
+        <label for="hamilton">Lewis <b>Hamilton</b></label>
+        <br />
+        <input type="checkbox" id="sainz" value="sainz" v-model="drivers" />
+        <label for="sainz">Carlos <b>Sainz</b></label>
+        <br />
+        <input type="checkbox" id="leclerc" value="leclerc" v-model="drivers" />
+        <label for="leclerc">Charles <b>Leclerc</b></label>
+        <br />
+        <input type="checkbox" id="russell" value="russell" v-model="drivers" />
+        <label for="russell">George <b>Russell</b></label>
+        <br />
+        <input type="checkbox" id="norris" value="norris" v-model="drivers" />
+        <label for="norris">Lando <b>Norris</b></label>
+        <br />
+        <input type="checkbox" id="stroll" value="stroll" v-model="drivers" />
+        <label for="stroll">Lance <b>Stroll</b></label>
+        <br />
+        <input type="checkbox" id="gasly" value="gasly" v-model="drivers" />
+        <label for="gasly">Pierre <b>Gasly</b></label>
+        <br />
+        <input type="checkbox" id="ocon" value="ocon" v-model="drivers" />
+        <label for="ocon">Esteban <b>Ocon</b></label>
+        <br />
+        <input type="checkbox" id="piastri" value="piastri" v-model="drivers" />
+        <label for="piastri">Oscar <b>Piastri</b></label>
+        <br />
+        <input type="checkbox" id="albon" value="albon" v-model="drivers" />
+        <label for="albon">Alexander <b>Albon</b></label>
+        <br />
+        <input
+          type="checkbox"
+          id="hulkenberg"
+          value="hulkenberg"
+          v-model="drivers"
+        />
+        <label for="hulkenberg">Nico <b>Hulkenberg</b></label>
+        <br />
+        <input type="checkbox" id="bottas" value="bottas" v-model="drivers" />
+        <label for="bottas">Valtteri <b>Bottas</b></label>
+        <br />
+        <input type="checkbox" id="zhou" value="zhou" v-model="drivers" />
+        <label for="zhou">Guanyu <b>Zhou</b></label>
+        <br />
+        <input type="checkbox" id="tsunoda" value="tsunoda" v-model="drivers" />
+        <label for="tsunoda">Yuki <b>Tsunoda</b></label>
+        <br />
+        <input
+          type="checkbox"
+          id="magnussen"
+          value="magnussen"
+          v-model="drivers"
+        />
+        <label for="magnussen">Kevin <b>Magnussen</b></label>
+        <br />
+        <input
+          type="checkbox"
+          id="sargeant"
+          value="sargeant"
+          v-model="drivers"
+        />
+        <label for="sargeant">Logan <b>Sargeant</b></label>
+        <br />
+        <input type="checkbox" id="lawson" value="lawson" v-model="drivers" />
+        <label for="lawson">Liam <b>Lawson</b></label>
+        <br />
+        <input type="checkbox" id="devries" value="devries" v-model="drivers" />
+        <label for="devries">Nyck <b>de Vries</b></label>
+        <br />
+        <input
+          type="checkbox"
+          id="ricciardo"
+          value="ricciardo"
+          v-model="drivers"
+        />
+        <label for="ricciardo">Daniel <b>Ricciardo</b></label>
+      </div>
+
       <br />
       <div v-if="drivers.length > 2">
         <b>All particinpating drivers: {{ drivers.join(' & ') }}</b>
@@ -124,6 +144,7 @@
       </div>
 
       <div id="copy">
+        <hr />
         <p>&copy; 2023 LucasAmmer</p>
         <p>
           © 2023 Formula One World Championship Limited. Formula 1 and related
